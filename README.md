@@ -15,5 +15,5 @@
 * **Week_3**: 
   * _Data_:
   * _Scripts_:
-  * Outputs_:
+  * _Outputs_:
   
