@@ -13,8 +13,17 @@
   * **_Scripts_**: [week2class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_2/Scripts/week2class.R) 
   * **_Outputs_**: N/A   
     
-* **Week_3**: 
+* **Week_3b**: We were introduced to **ggplot2** and learned how to make our first plot through ggplot2. ggplot2 is a data visualization package in R and is good to use for describing and building graphs. It helps visualize our data better. Before starting ggplot2 or any data visualization on R, we always made sure to load tidyverse each time we start a new session (ie **library(tidyverse)**). Run the command in **bold** when we start a new session, or script. The script was ran using the data from Palmer Penguins. 
+  * **_Data_**: N/A
+  * **_Scripts_**: [week3b.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3b/Scripts/week3b.R)
+  * **_Outputs_**: N/A
+  
+* **Week_4**:
   * **_Data_**:
   * **_Scripts_**:
-  * **_Outputs_**:
-  
+  * **Outputs_**: 
+
+* **Week_5**:
+  * **_Data_**:
+  * **_Scripts_**:
+  * **_Outputs_**: 
