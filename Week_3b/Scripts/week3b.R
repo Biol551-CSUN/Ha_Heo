@@ -16,15 +16,15 @@ glimpse(penguins) # Without loading tidyverse first, this function won't work
 ### Data ### 
 library(palmerpenguins) # Data: Palmer Penguins
 
-#### Visualize Palmer Penguins Data with Mapping ####
+#### Visualize Palmer Penguins Data with Mapping to specific variables (color, shape, size, alpha) ####
 
 ggplot(data=penguins, # Penguin Dataframe
        mapping = aes(x = bill_depth_mm, # Map bill_depth_mm on x-axis
                      y = bill_length_mm, # Map bill_length_mm on y-axis
                      color = species, # Mapping species to the color of each point
                      shape = species, 
-                     size = body_mass_g,
-                     alpha = flipper_length_mm)) + # Alpha (transparency)
+                     size = body_mass_g, # Mapping
+                     alpha = flipper_length_mm)) + # Alpha (transparency), mapping
   geom_point()+ # Represent each observation with a point (Each plot uses a different visual object to present the data)
   labs(title = "Bill depth and length", # Title of the plot
        subtitle ="Dimensions for Adelie, Chinstrap, and Gentoo Penguins", # Subtitle of the plot
@@ -34,23 +34,23 @@ ggplot(data=penguins, # Penguin Dataframe
   scale_color_viridis_d() # Adding a discrete color scale 
 
 
-### Visualize data with Setting ###
+### Visualize data with Setting (geom_*() ###
 
 ggplot(data=penguins, 
        mapping = aes(x = bill_depth_mm,
                      y = bill_length_mm)) + 
-geom_point(size = 2, alpha = 0.5)
+geom_point(size = 2, alpha = 0.5) # Setting
 
 ### Faceting ###
 ## Note: Make sure to always label your plots with proper titles and axis labels
 ggplot(penguins,
        aes(x = bill_depth_mm,
            y = bill_length_mm,
-           color = species,)) +
+           color = species,)) + # Facet and color, no legend
   geom_point()+
   scale_color_viridis_d()+
-  facet_grid(species~sex)+ # ~ tilda; species as a function of sex
-  guides(color = FALSE)
+  facet_grid(species~sex)+ # ~ tilda; species as a function of sex, 2D grid, rows ~ columns
+  guides(color = FALSE) # Facet and color, no legend
                      
 
 
