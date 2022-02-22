@@ -19,7 +19,7 @@
   * **_Data_**: N/A
   
 * **Week_4**:
-  * **_Data_**:
+  * **_Data_**:[chem_data_dictionary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Data/chem_data_dictionary.csv), 
   * **_Scripts_**:
   * **_Outputs_**: 
 
