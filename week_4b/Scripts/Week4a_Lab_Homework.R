@@ -43,6 +43,6 @@ penguins %>% # Plot and using penguins dataframe
  
 
 
-ggsave(here("Week_4","Outputs","Homework4lab.pdf"), # Save in Outputs Folder of Week4
+ggsave(here("Week_4b","Outputs","Homework4lab.pdf"), # Save in Outputs Folder of Week4
        width = 7, height = 5)
 
