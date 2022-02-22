@@ -18,10 +18,10 @@
   * **_Outputs_**: [penguin.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3b/Output/penguin.png), [penguinlab.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3b/Output/penguinlab.png)
   * **_Data_**: N/A
   
-* **Week_4**:
-  * **_Data_**:[chem_data_dictionary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Data/chem_data_dictionary.csv), 
-  * **_Scripts_**:
-  * **_Outputs_**: 
+* **Week_4**: Introduced to dplyr and tidylr (Data Wrangling - group_by, filter, select, summarise, mutate, separate, pivots, unite)
+  * **_Data_**: [chem_data_dictionary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Data/chem_data_dictionary.csv), [chemicaldata_maunal.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Data/chemicaldata_maunalua.csv)
+  * **_Scripts_**: [Week4a_Penguin_data_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4a_Penguin_data_class.R), [Week4a_Lab_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4a_Lab_Homework.R), [Week4b_Biogeochemistry_data_classwork.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4b_Biogeochemistry_data_classwork.R), and [Week4b_Lab_chemistrydata_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4b_Lab_chemistrydata_Homework.R)
+  * **_Outputs_**: [summary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/summary.csv), [Homework4lab.pdf](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4lab.pdf), [Homework4b.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4b.csv), and [Homework4b.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4b.png)
 
 * **Week_5**:
   * **_Data_**:
