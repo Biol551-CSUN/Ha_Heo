@@ -28,7 +28,7 @@ ChemData_long <- ChemData_clean %>%  # Assigning ChemData_Long object
   group_by(Variables, Season, Zone) %>% # Before summarise, grouping by variables, season, and zone
   summarise(mean_vals = mean(Values, na.rm = TRUE),# calculating mean
             var_vals = var(Values, na.rm = TRUE)) %>% # calculating variance
-write_csv(here("Week_4", "Outputs", "Homework4b.csv")) # Saving as a .csv
+write_csv(here("Week_4b", "Outputs", "Homework4b.csv")) # Saving as a .csv
 View(ChemData_clean)
 
 ChemData_long %>% # Using data frame chemData_long
