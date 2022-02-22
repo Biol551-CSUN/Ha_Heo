@@ -43,7 +43,7 @@ ChemData_long %>% # Using data frame chemData_long
        y = "Mean values", # Editing/changing y-axis title 
        caption = "Source: Silbiger et al. 2020")+
   theme(title = element_text(size = 18, color = "blue2")) # Element_text() sets the font size, color, and face of the text elements like plot.title
-ggsave(here("Week_4", "Outputs","Homework4b.png"), # Saving the plot as a png in Outputs folder
+ggsave(here("Week_4b", "Outputs","Homework4b.png"), # Saving the plot as a png in Outputs folder
        width = 7, height = 5) # changing the dimensions in inches
 
 ############################################################################################################################################################
