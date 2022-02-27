@@ -23,7 +23,7 @@
   * **_Scripts_**: [Week4a_Penguin_data_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4a_Penguin_data_class.R), [Week4a_Lab_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4a_Lab_Homework.R), [Week4b_Biogeochemistry_data_classwork.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4b_Biogeochemistry_data_classwork.R), and [Week4b_Lab_chemistrydata_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4b_Lab_chemistrydata_Homework.R)
   * **_Outputs_**: [summary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/summary.csv), [Homework4lab.pdf](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4lab.pdf), [Homework4b.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4b.csv), and [Homework4b.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4b.png)
 
-* **Week_5**:
-  * **_Data_**:
-  * **_Scripts_**:
-  * **_Outputs_**: 
+* **Week_5**: Introduction to different types of joins and lubridate
+  * **_Data_**: [CondData.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/CondData.csv), [DepthData.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/DepthData.csv), [Topt_data.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/Topt_data.csv), [data_dictionary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/data_dictionary.csv), [site.characteristics.data.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/site.characteristics.data.csv)
+  * **_Scripts_**:[Week5a_Practicing_joins.class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5a_Practicing_joins_class.R), [Week5b_Learning_lubridate_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5b_Learning_lubridate_class.R), [Week5b_Lab_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5b_Lab_Homework.R)
+  * **_Outputs_**: [Homework_Lab5.summary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Output/Homework_Lab5_summary.csv), [HomeworkLab5b.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Output/HomeworkLab5b.png)
