@@ -27,4 +27,29 @@
   * **_Data_**: [CondData.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/CondData.csv), [DepthData.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/DepthData.csv), [Topt_data.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/Topt_data.csv), [data_dictionary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/data_dictionary.csv), [site.characteristics.data.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/site.characteristics.data.csv)
   * **_Scripts_**:[Week5a_Practicing_joins.class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5a_Practicing_joins_class.R), [Week5b_Learning_lubridate_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5b_Learning_lubridate_class.R), [Week5b_Lab_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5b_Lab_Homework.R)
   * **_Outputs_**: [Homework_Lab5.summary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Output/Homework_Lab5_summary.csv), [HomeworkLab5b.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Output/HomeworkLab5b.png)
+ 
+ * **Week_6**:
+   * **_Data_**:
+   * **_Scripts_**:
+   * **_Output_**:
+ 
+ * **Week_7**:
+   * **_Data_**:
+   * **_Scripts_**:
+   * **_Output_**:
+ 
+ * **Week_8**:
+   * **_Data_**:
+   * **_Scripts_**:
+   * **_Output_**:
+ 
+ * **Week_9**:
+   * **_Data_**:
+   * **_Scripts_**:
+   * **_Output_**:
+ 
+ * **Week_10**:
+   * **_Data_**:
+   * **_Scripts_**:
+   * **_Output_**:
 
