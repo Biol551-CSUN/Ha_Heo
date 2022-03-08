@@ -28,10 +28,10 @@
   * **_Scripts_**:[Week5a_Practicing_joins.class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5a_Practicing_joins_class.R), [Week5b_Learning_lubridate_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5b_Learning_lubridate_class.R), [Week5b_Lab_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5b_Lab_Homework.R)
   * **_Outputs_**: [Homework_Lab5.summary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Output/Homework_Lab5_summary.csv), [HomeworkLab5b.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Output/HomeworkLab5b.png)
  
- * **Week_6**:
-   * **_Data_**:
-   * **_Scripts_**:
-   * **_Output_**:
+ * [**Week_6**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_6): This week we were introduced to Rmarkdown and had some practice with it as well.
+   * **_Data_**: N/A
+   * **_Scripts_**: [Palmer_penguins.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Scripts/Palmer_penguins.Rmd) and [Week_6_Homework_Penguins_Data.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Scripts/Week6_Homework_Penguins_Data.Rmd) 
+   * **_Output_**: [penguin1-1.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Outputs/penguin1-1.png) and [Lab6_Homework.png-1.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Outputs/Lab6_Homework.png-1.png)
  
  * **Week_7**:
    * **_Data_**:
