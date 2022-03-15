@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Week6_Homework"
 author: "Sally Heo"
@@ -86,3 +87,93 @@ labs(title = "Bill Depth (mm) vs Sex", # Label title of plot
 
 
 
+=======
+---
+title: "Week6_Homework"
+author: "Sally Heo"
+date: "3/3/2022"
+output: 
+  prettydoc::html_pretty:
+    theme: hpstr
+    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.path = '../Outputs/', message = FALSE)
+```
+
+# Introduction #
+
+Today we are going to work with the **Palmer Penguins** data and create a table and figure in _R Markdown_ 
+
+We will be looking at three **Palmer Penguins** species:
+
+* Adelie
+* Chinstrap
+* Gentoo 
+
+The **Palmer Penguins** were studied on three islands:
+
+* Biscoe
+* Dream
+* Torgersen
+
+# Load the libraries
+
+First, libraries needed to code are loaded. 
+
+```{r}
+library(kableExtra) # Load kableExtra
+library(tidyverse) # Load tidyverse
+library(here) # Load here
+library(palmerpenguins) # Load Palmer Penguins
+```
+
+# Inspecting the data
+
+Through glimpse, we can take a quick look at the **Palmer Penguins** dataframe. 
+
+```{r}
+glimpse(penguins) # View the Penguins data
+```
+
+# Table for Palmer Penguins
+
+Here, we will look at the mean and variance of bill depth (mm) for the Palmer Penguins living on each of the three islands. 
+
+```{r, echo = FALSE}
+penguins %>% 
+  group_by(species) %>% # Group by species
+  summarise(mean = mean(bill_depth_mm, na.rm = TRUE), # Summarise is used to calculate mean bill depth (mm)
+           variance = var(bill_depth_mm, na.rm = TRUE)) %>% # calculating variance in bill depth (mm) 
+  kbl() %>% # Making it a kable table
+  kable_classic() %>% # Using the kable theme classic
+  row_spec(0, bold = T, color = "white", background = "dodgerblue") %>% # changing the first row to have bold text and dodgerbue background
+  kable_styling(full_width = FALSE) # Making the width smaller than the entire page
+
+```
+# Plot
+
+We will make a plot to study Bill Depth (mm) for each of the three species living on each island for each sex (male and female).
+
+```{r Lab6_Homework.png, echo = FALSE}
+penguins %>% # Using penguin dataframe
+  drop_na(sex, bill_depth_mm) %>% # Dropping NA values from sex and bill depth
+  ggplot(mapping = aes(x = sex, # Ploting sex on x-axis
+                       y = bill_depth_mm, # Plotting bill depth on y-axis
+                       color = species)) + # Plotting color to species
+geom_boxplot() + # Making geometry point, box plot
+facet_wrap(~island) + # Facet wrapping for island
+labs(title = "Bill Depth (mm) vs Sex", # Label title of plot
+     subtitle = " Average Bill Depth by Sex for Adelie, Chinstrap, and Gentoo Penguins", # Adding subtitle
+     y = "Bill Depth (mm)", # changing y-axis title
+     x = "Sex", # changing x-axis title
+     caption = "Source: Palmer Station LTER / palmerpenguins package",) + # Adding a caption
+  theme(title = element_text(size = 14, color = "darkorchid2")) # Editing theme and font of plot and color
+
+```
+
+
+
+
+>>>>>>> 0637edba3d05df5a14b7b74aa7151407f9d54e07

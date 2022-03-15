@@ -1,0 +1,82 @@
+---
+title: 'Week 7: Meteorites Homework'
+author: "Sally Heo"
+date: "3/8/2022"
+output:
+  prettydoc::html_pretty:
+    theme: tactile
+---
+# Introduction #
+For this homework assignment, we practiced creating a map using the Meteorites datasets from Tidy Tuesday. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load libraries needed to code #
+```{r, message=FALSE}
+library(tidyverse) #Load tidyverse
+library(here) #Load here
+library(maps) #Load maps
+library(mapdata) #Load mapdata
+library(mapproj) #Load mapproj
+```
+
+# Load Data #
+
+We are reading the Meteorites dataset from Tidy Tuesday
+```{r, warning=FALSE, message=FALSE, results="hide", fig.show="hide"}
+meteorites <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-11/meteorites.csv")
+glimpse(meteorites)#View Meteorites Data
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, results="hide"}
+meteorites %>% #Brining Meteorites dataframe to use
+  drop_na() #Drop NAs
+View(meteorites) #View Meteorites dataset
+```
+
+# Make a map of the world (1st step) #
+```{r, echo = FALSE, warning = FALSE, message = FALSE, results="hide"}
+world <- map_data("world") #get data for the entire world
+head(world)
+ggplot()+ #creating the base for the world map
+  geom_polygon(data = world,#Using geometry point, polygon using world data
+               aes(x = long,#x-axis is long
+                   y = lat,#y-axis is lat
+                   group = group,#Set group to group
+                   fill = region),#Fill the region of map
+               color = "black")+ #Adding black borders to map
+  guides(fill = FALSE)+ #Removing legend for fill
+  theme_minimal()+ #Set theme to minimal
+  theme(panel.background = element_rect(fill = "lightblue"))+ #Make background ocean blue
+  coord_map(projection = "mercator",#changing projection to mercator
+            xlim = c(-180, 180))#Setting the limits of x-axis
+
+
+```
+
+# Adding the Meteorites Data to the World Map #
+```{r, echo = FALSE, warning = FALSE, message = FALSE, results="hide"}
+ggplot()+ #Using the base world map code
+  geom_polygon(data = world,#Adding geometry point, geom polygon
+               aes(x = long,#x-axis is long
+                   y = lat,#y-axis is lat
+                   group = group),#Setting group to group
+               fill = "gray", #Fill the map and everything in gray
+                   color = "black")+ #Adding black borders
+  geom_point(data = meteorites, aes(x = long,#x-axis is long
+                                    y = lat, #y-axis is lat
+                                    size = mass,#Size of the points are according to the mass
+                                    color = mass))+ #color of the points according to the mass
+  theme(panel.background = element_rect(fill = "lightblue"))+ #Make background ocean lightblue
+  coord_map(projection = "mercator", #Setting projection to Mercator
+            xlim = c(-180,180))+ #Setting the x-limits
+  labs(title = "Meteorite Impacts",#Giving title to map plot
+       x = "Long",#x-axis is long
+       y = "Lat", #y-axis is lat
+       caption = "Source: Meteoritical Society by way of NASA", #Adding source
+       color = "Mass (g)", #change legend title
+       size = "Mass (g)") #change legend title
+ggsave(here("Week_7", "Output", "meteoritehw.png"))
+  

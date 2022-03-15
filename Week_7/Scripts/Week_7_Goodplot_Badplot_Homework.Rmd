@@ -1,0 +1,100 @@
+---
+title: "Week 7 Bad Plot/Good Plot Homework"
+author: "Sally Heo"
+date: "3/14/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Introduction ###
+Today I will be using the data from [Tidy Tuesday 2019-05-28](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-05-28) on Wine to create a good plot and a bad plot for my homework assignment. 
+
+### Load Libraries ###
+First, before creating any ggplots, I will load the libraries that are required to make my ggplots. 
+
+```{r, message=FALSE, warning=FALSE,}
+library(tidyverse)#Load tidyverse
+library(here) #Load here
+library(png) #Load png
+library(plotly) #Load plotly
+library(tibble) #Load tibble
+library(jpeg) #Load jpeg
+library(ggpubr) #Load ggpubr
+library(readr) #Load readr
+library(dplyr) #Load dplyr
+```
+
+### Load and View the Wine Data ###
+Next, I will load the Wine data to examine which variables in the dataset I would like to work with. After viewing the wine data, I decided to analyze the relationship of the grape type of the wine and the price in USD. 
+
+```{r message=FALSE, warning=FALSE}
+wine_ratings <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-05-28/winemag-data-130k-v2.csv")
+View(wine_ratings)
+```
+### Data Wrangling ###
+I will do some data wrangling to organize and only filter the variables in the Wine data that I want to work with. Two data frames will be used for plotting. Wine_ratings_bad will be the data frame used for my "bad plot" and wine_ratings_good will the the data frame used for by "good plot". 
+
+### Bad Plot ###
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+wine <- here("Week_7", "Data", "wine.jpg") #Importing wine image to use for plot
+wine <- jpeg::readJPEG(wine) #Reading the wine image as a jpeg
+Wine_ratings_bad <- wine_ratings %>% #Using Wine_ratings_bad dataframe
+  select(country, points, price, variety, winery)#Only want to look at these specific variables
+Wine_ratings_bad %>% #Wine_ratings_bad dataframe 
+  ggplot(aes(x = variety,#Plot x-axis as variety
+             y = price, #Plot y-axis as price
+             color = price)) + #Fill color for the price
+  background_image(wine) + #Using background image of wine
+  geom_line()+ #Using geometry line
+  theme(axis.ticks = element_blank(), #Remove axis ticks
+        axis.text.y = element_blank(), #Remove y-axis text
+        axis.title.y = element_blank()) + #Hiding y-axis title
+  theme(panel.background = element_rect(fill = "mediumspringgreen",#Panel color mediumspringgreen
+                                        color = "mediumorchid1"),# Border of plot color mediumorchid1
+        plot.background = element_rect(fill = "darkblue"))#Plot background is darkblue
+ggsave(here("Week_7", "Output", "bad_plot.png"), #Save the output as bad_plot.png
+       width = 7, height = 5)
+
+  
+```
+
+### **Discussion of why this is a bad plot: ** ###
+* The plot is not clear in what it is trying to emphasize. It is unclear what the purpose of the plot is and what it is trying to capture. 
+* There is no titles and no labels for the y-axis. There is only a label for the x-axis
+* Even though there is a label on the x-axis, there is way too many labels and the text is overlapping with each other. It is also overlapping each other too much and even hard to make out the words in the plot. 
+* It is hard to see the colors that correspond to the legend due to the background image of wine. 
+* Even though the legend says price, it is unclear exactly what this price is referring too. It is very vague and open to intepretation.
+
+### Good Plot ###
+
+```{r, message=FALSE,warning=FALSE, echo=FALSE}
+wine_ratings_good <- wine_ratings %>% #Brining dataframe wine_ratings_good
+  drop_na(price) %>% #Drop NA's in price
+  select(country, points, price, variety, winery) %>% #Only selecting certain variables in column to work with
+  filter(country == "US") %>% #Filter  only to show US country
+  group_by(price) #Group_by price
+
+wine_ratings_good %>% 
+  ggplot(mapping = aes(x = points,# x-axis is points
+                       y = price, #y-axis is price
+                       color = points))+ #give color according to price
+  geom_bar(stat = "identity")+ #Geometry point, geom_bar
+  theme(title = element_text(size = 12, #Editing the theme of graph
+                                  color = "red1"))+ #Giving color to title, x-axis and y-axis
+  labs(title = "A higher rating for wine doesn't equate to an expensive wine", #Give title
+       x = "Wine Ratings", #Labeling x-axis
+       y = "Price per bottle [USD]", #Labeling y-axis
+       color = "Points",
+       subtitle = "Based on the United States Wine rating", #Giving subtitle
+       caption = "Source: Kaggle") #Giving caption
+ggsave(here("Week_7", "Output", "goodplot.png"),#Save outputs here
+       width =7, height = 5)
+```
+**Discussion of why this is a good plot **
+* Clear with plot titles, x-axis, and y-axis labeled
+* There are no overlapping aesthetics that may make it hard to see the data
+* The title of data explains clearly the purpose and intent of what the data is trying to display
+
