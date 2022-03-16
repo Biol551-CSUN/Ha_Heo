@@ -3,10 +3,10 @@
 #### Updated on: 2022-03-15 ####
 
 #### Install new packages ####
-install.packages("patchwork")
-install.packages("ggrepel")
-install.packages("gganimate")
-install.packages("magick")
+install.packages("patchwork")#For bringing plots together
+install.packages("ggrepel")#For repelling labels
+install.packages("gganimate")#Animations
+install.packages("magick") #For images
 
 #### Load libraries needed to code ####
 library(tidyverse)
