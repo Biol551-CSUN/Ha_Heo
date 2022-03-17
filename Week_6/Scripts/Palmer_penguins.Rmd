@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 ---
-title: "Penguine_package"
+title: "Penguin_package"
 author: "Sally Heo"
 date: "3/3/2022"
 output: 
