@@ -1,0 +1,168 @@
+---
+title: 'Week 8: Functional Programming'
+author: "Sally Heo"
+date: "3/17/2022"
+output:
+  prettydoc::html_pretty:
+    theme: tactile
+          
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Libraries needed to code ##
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse) #Load tidyverse
+library(here) #Load here
+library(palmerpenguins) #Load palmerpenguins
+library(PNWColors) #Load PNWColors
+```
+## Data Analysis ##
+## Create a dataframe ##
+* Creating a dataframe of random numbers
+* Anytime you have to do a task more than once
+* Example of where we want to rescale data in multiple columns (value - min/(max-min))
+```{r}
+df <- tibble::tibble(
+  a = rnorm(10),
+  b = rnorm(10),
+  c = rnorm(10),
+  d = rnorm(10)
+)
+head(df)
+```
+
+## Rescale every column individually ##
+* We can also write a function for this
+```{r}
+rescale01 <- function(x) {
+  value <- (x-min(x, na.rm = TRUE))/(max(x, na.rm = TRUE))/(max(x, na.rm = TRUE)-min(x, na.rm = TRUE))
+  return(value)
+}
+df %>% 
+  mutate(a = rescale01(a),
+         b = rescale01(b),
+         c = rescale01(c),
+         d = rescale01(d))
+```
+## Make function to convert degrees fahrenheit to celcius ##
+```{r}
+fahrenheit_to_celsius <- function(temp_F){ #Naming the function, decide what arguments are
+  temp_C <- (temp_F - 32) * 5 / 9 #Calculation for F to C, Put in the equation
+  return(temp_C) #Temp in C is being returned
+}
+fahrenheit_to_celsius(32) # 32 F to celsius
+fahrenheit_to_celsius(212) # 212 F to celsius
+
+```
+
+## Think, Pair, Share ##
+### Write a function that converts celcius to kelvin (Remember Kelvin is celcius + 273.15)
+```{r}
+c_to_k <- function(temp_c) {
+  temp_k <- (temp_c + 273.15)
+  return(temp_k)}
+c_to_k(2)
+```
+
+# Making plots into a function #
+```{r, message=FALSE, warning=FALSE}
+myplot <- function(data, x, y){ #Give name to function, name of function and set up
+pal <- pnw_palette("Lake",3, type = "discrete") #my color palette
+
+ggplot(penguins, aes(x = {{x}}, y = {{y}}, color = island)) + #Make names broad so it can be applicable to several values
+  geom_point() + #Add a geometry point
+  geom_smooth(method = "lm") + #Add a linear model
+  scale_color_manual("Island", values = pal)+ #Use pretty colors and change the legend title
+  theme_bw() #theme bw
+}
+
+
+myplot(data = penguins, x = body_mass_g, y = bill_length_mm)
+myplot(data = penguins, x = body_mass_g, y = flipper_length_mm)
+```
+
+## Adding defaults ##
+* Create a default for the function to always default to the penguins dataset
+* Can set those directly in the function. 
+
+```{r, message=FALSE, warning=FALSE}
+myplot <- function(data = penguins, x, y, lines=TRUE){
+pal <- pnw_palette("Lake",3, type = "discrete")
+
+if(lines==TRUE){
+ggplot(data, aes(x = {{x}}, y = {{y}}, color = island))+
+  geom_point()+
+  geom_smooth(method = "lm")+
+  scale_color_manual("Island", values = pal)+
+  theme_bw()
+}
+else{
+ggplot(data, aes(x = {{x}}, y = {{y}}, color = island))+
+    geom_point()+
+    scale_color_manual("Island", values=pal)+
+    theme_bw()
+}
+}
+myplot(x = body_mass_g, y = flipper_length_mm, lines = FALSE)
+
+  
+  
+myplot(x = body_mass_g, y = flipper_length_mm)+ #Layering the plot using + (like it is a regular ggplot to change things like labels)
+  labs(x = "Body mass (g)",
+       y = "Flipper length (mm)")
+```
+## Add an if-else statement for more flexibility ##
+* Suppose that if a > b then f should be = to 20, else f should be equal to 10. Using if/else we:
+```{r}
+a <- 4
+b <- 5
+if (a > b) { #my question
+  f <- 20 #if it is true give me answer 1
+} else { #else give me answer 2
+  f <- 10
+}
+f
+```
+# Back to plotting #
+* Using if..else we can make our function even more flexible
+* Wanting the option of adding the geom_smooth lines
+*We can create a variable that if set to TRUE add the geom_smooth, otherwise print without
+```{r}
+myplot <- function(data = penguins, x, y, lines = TRUE){ #add new argument for lines
+pal <- pnw_palette("Lake",3, type = "discrete") # my color palette
+
+ggplot(data, aes(x = {{x}}, y = {{y}}, color = island))+
+  geom_point()+
+  geom_smooth(method = "lm")+ #add a linear model
+  scale_color_manual("Island", values=pal)+ #use pretty colors and change the legend title
+  theme_bw()
+}
+```
+
+# If-else #
+* Adding an if-else statement
+```{r, message=FALSE, warning=FALSE}
+myplot <- function(data = penguins, x, y, lines = TRUE){ # Add new argument for lines
+pal <- pnw_palette("Lake",3, type = "discrete") #My color palette
+if(lines==TRUE){
+ggplot(data, aes(x = {{x}}, y = {{y}}, color = island))+
+    geom_point()+
+    geom_smooth(method = "lm")+ #Add a linear model
+    scale_color_manual("Island", values = pal)+ #Use pretty colors and change the legend title
+    theme_bw()
+}
+else{
+ggplot(data, aes(x = {{x}}, y = {{y}}, color = island))+
+    geom_point()+
+    scale_color_manual("Island", values=pal)+ #Use pretty colors and change the legend title
+    theme_bw()
+}
+}
+
+myplot(x = body_mass_g, y = flipper_length_mm) #Testing (With lines)
+myplot(x = body_mass_g, y = flipper_length_mm, lines = FALSE) #Testing (without)
+```
+

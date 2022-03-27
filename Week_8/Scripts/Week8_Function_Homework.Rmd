@@ -1,0 +1,91 @@
+---
+title: "Week 8 Function Homework"
+author: "Sally Heo"
+date: "3/17/2022"
+output:
+  prettydoc::html_pretty:
+    theme: tactile
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Load Libraries needed to code ##
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse) #Load tidyverse
+library(here) #Load here
+library(palmerpenguins) #Load Palmer Penguins
+library(PNWColors) #Load PNWColors
+library(ggthemes) #Load ggthemes
+
+```
+
+## Data Analysis ##
+
+## Making A Function ##
+* Using Palmer Penguins data to make a function
+```{r}
+cm_to_i <- function(cm){ #creating function cm to inches - input is cm
+  i <- cm/2.54 #Formula to convert from cm to inches
+  return(i) #Return inches value
+}
+cm_to_i(4.25) #converting 4.25 cm to inches
+```
+## Testing the function ##
+```{r}
+cm_to_i(5.24)
+cm_to_i(200.6)
+```
+## Making a Plot into a Function ##
+* Using Palmer Penguins dataset to make a plot function
+```{r, message=FALSE, warning=FALSE}
+fun_plot <- function(data = penguins, x, y, lines=TRUE){ #Starting a function
+pal <- pnw_palette("Starfish",3, type = "discrete") #Creating a custom color palette
+
+if(lines==TRUE){ #if lines is TRUE...
+ggplot(data, aes(x = {{x}}, #Make into ggplot with x-axis mapped to {{x}} values
+                 y = {{y}}, #Make into ggplot with y-axis mapped to {{y}} values
+                 color = species))+ #Map color to species
+  geom_point(size = 3)+ #Geometry point, size 3
+  scale_color_manual("species", values = pal)+ #Use the custom color palette
+  theme_bw()#theme black and white
+}
+else{
+ggplot(data, aes(x = {{x}}, #Make into ggplot with x-axis mapped to {{x}}
+                 y = {{y}}, #Make into ggplot with y-axis mapped to {{y}}
+                 color = species))+ #Map color to species
+  geom_point(size = 3)+ #Geometry point size 3
+  scale_color_manual("species", values = pal)+ #Use the custom color palette
+  theme_bw()#theme black and white
+}
+}
+fun_plot(x = bill_length_mm, y = bill_depth_mm, lines = TRUE)+ #Using function
+  labs(title = "Bill depth (mm) vs Bill length (mm)", #Adding title to plot
+       x = "Bill Length (mm)", #Labeling x-axis as Bill Length
+       y = "Bill Depth (mm)", #Labeling y-axis as Bill depth
+       color = "Species", #Map color to species
+       caption = "Source: Palmer Penguins Data") #Adding caption
+ggsave(here("Week_8", "Output", "functionplothw.png")) #Save here
+
+
+```
+## Testing the second function to make plots ##
+```{r, message=FALSE, warning=FALSE}
+fun_plot(data = penguins, x = body_mass_g, y = flipper_length_mm)+ #New plot with new x-axis and y-axis
+  labs(title = "Penguin flipper length (mm) vs body mass (g)", #Adding title
+       x = "Body Mass (g)", #Labeling x-axis
+       y = "Flipper length (mm)", #Labeling y-axis
+       fill = "Species", #Map color to species
+       caption = "Source: Palmer Penguins data") #Add caption
+```
+```{r, message=FALSE, warning=FALSE}
+fun_plot(data = penguins, x = sex, y = body_mass_g)+ #Make a new plot with new x-axis and y-axis
+  labs(title = "Penguin body mass(g) by sex for three species", #Add title of plot
+       x = "Sex",#x-axis label, Sex
+       y = "Body Mass (g)", #y-axis label, Body Mass
+       fill = "Species", #Map color to species
+       caption = "Source: Palmer Penguins data") #Add caption
+```
+

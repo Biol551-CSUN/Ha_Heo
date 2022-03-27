@@ -15,7 +15,7 @@ library(patchwork)#Load patchwork
 library(ggrepel) #Load ggrepel
 library(gganimate) #Load gganimate
 library(magick) #Load magick
-library(palmerpenguins) #Load Palmerpenguins
+library(palmerpenguins) #Load Palmer penguins
 
 #### Patchwork ####
 #### Let's start with two simple plots from the Palmer Penguins dataset ####
