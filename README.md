@@ -8,40 +8,40 @@
 
 ## **Folders**:
 
-* **Week_2**: As a class, we created our first simple script and learned how to import data using the class's repository.  
+* [**Week_2**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_2): As a class, we created our first simple script and learned how to import data using the class's repository.  
   * **_Data_**: [weightdata.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_2/Data/weightdata.csv) 
   * **_Scripts_**: [week2class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_2/Scripts/week2class.R) 
   * **_Outputs_**: N/A   
     
-* **Week_3b**: We were introduced to **ggplot2** and learned how to make our first plot through ggplot2. In addition, we plotted the Palmer Penguins data in class and practiced making a plot. Below are the scripts used in class to generate the plot in class along with the lab assignment/homework due. The outputs folder contains the plots that were generated in class and for homework. 
-  * **_Scripts_**: [week3b.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3b/Scripts/week3b.R), [week3c.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3b/Scripts/week3c.R), [Homework_Week_3.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3b/Scripts/Homework_Week_3.R)
-  * **_Outputs_**: [penguin.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3b/Output/penguin.png), [penguinlab.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3b/Output/penguinlab.png)
+* [**Week_3b**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_3): We were introduced to **ggplot2** and learned how to make our first plot through ggplot2. In addition, we plotted the Palmer Penguins data in class and practiced making a plot. Below are the scripts used in class to generate the plot in class along with the lab assignment/homework due. The outputs folder contains the plots that were generated in class and for homework. 
+  * **_Scripts_**: [Homework_Week_3.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3/Scripts/Homework_Week_3.R), [Week3b_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3/Scripts/Week3b_Homework.R), [Week3b.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3/Scripts/week3b.R), and [week3c.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3/Scripts/week3c.R)
+  * **_Outputs_**: [penguin.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3/Output/penguin.png) and [penguinlab.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_3/Output/penguinlab.png)
   * **_Data_**: N/A
   
-* **Week_4**: Introduced to dplyr and tidylr (Data Wrangling - group_by, filter, select, summarise, mutate, separate, pivots, unite)
-  * **_Data_**: [chem_data_dictionary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Data/chem_data_dictionary.csv), [chemicaldata_maunal.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Data/chemicaldata_maunalua.csv)
-  * **_Scripts_**: [Week4a_Penguin_data_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4a_Penguin_data_class.R), [Week4a_Lab_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4a_Lab_Homework.R), [Week4b_Biogeochemistry_data_classwork.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4b_Biogeochemistry_data_classwork.R), and [Week4b_Lab_chemistrydata_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Scripts/Week4b_Lab_chemistrydata_Homework.R)
-  * **_Outputs_**: [summary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/summary.csv), [Homework4lab.pdf](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4lab.pdf), [Homework4b.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4b.csv), and [Homework4b.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/week_4b/Outputs/Homework4b.png)
+* [**Week_4**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_4): Introduced to dplyr and tidylr (Data Wrangling - group_by, filter, select, summarise, mutate, separate, pivots, unite)
+  * **_Data_**: [chem_data_dictionary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Data/chem_data_dictionary.csv) and [chemicaldata_manual.ua.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Data/chemicaldata_maunalua.csv)
+  * **_Scripts_**: [Week4a_Lab_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Scripts/Week4a_Lab_Homework.R), [Week4a_Penguin_data_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Scripts/Week4a_Penguin_data_class.R), [Week4b_Biogeochemistry_data_classwork.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Scripts/Week4b_Biogeochemistry_data_classwork.R), [Week4b_Lab_chemistrydata_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Scripts/Week4b_Lab_chemistrydata_Homework.R)
+  * **_Outputs_**: [Homework4b.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Outputs/Homework4b.csv), [Homework4b.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Outputs/Homework4b.png), [Homework4lab.pdf](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Outputs/Homework4lab.pdf), and [summary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_4/Outputs/summary.csv)
 
-* **Week_5**: Introduction to different types of joins and lubridate
+* [**Week_5**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_5): Introduction to different types of joins and lubridate
   * **_Data_**: [CondData.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/CondData.csv), [DepthData.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/DepthData.csv), [Topt_data.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/Topt_data.csv), [data_dictionary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/data_dictionary.csv), [site.characteristics.data.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Data/site.characteristics.data.csv)
   * **_Scripts_**:[Week5a_Practicing_joins.class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5a_Practicing_joins_class.R), [Week5b_Learning_lubridate_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5b_Learning_lubridate_class.R), [Week5b_Lab_Homework.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Scripts/Week5b_Lab_Homework.R)
   * **_Outputs_**: [Homework_Lab5.summary.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Output/Homework_Lab5_summary.csv), [HomeworkLab5b.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_5/Output/HomeworkLab5b.png)
  
  * [**Week_6**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_6): This week we were introduced to Rmarkdown and had some practice with it as well.
    * **_Data_**: N/A
-   * **_Scripts_**: [Palmer_penguins.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Scripts/Palmer_penguins.Rmd) and [Week_6_Homework_Penguins_Data.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Scripts/Week6_Homework_Penguins_Data.Rmd) 
-   * **_Output_**: [penguin1-1.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Outputs/penguin1-1.png) and [Lab6_Homework.png-1.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Outputs/Lab6_Homework.png-1.png)
+   * **_Scripts_**: [Palmer_penguins.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Scripts/Palmer_penguins.Rmd), [Penguins.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Scripts/Penguins.Rmd), [Week6_Homework_Penguins_Data.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Scripts/Week6_Homework_Penguins_Data.Rmd), [test.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Scripts/test.Rmd)
+   * **_Output_**: [Lab6_Homework.png-1.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Outputs/Lab6_Homework.png-1.png), [outputspenguin1-1.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Outputs/outputspenguin1-1.png), [penguin1-1.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_6/Outputs/penguin1-1.png)
  
- * **Week_7**:
-   * **_Data_**:
-   * **_Scripts_**:
-   * **_Output_**:
+ * [**Week_7**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_7): This week we worked with spatial data and made maps. We used simple mapping using the {maps} package with ggplot
+   * **_Data_**: [CAPopdata.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Data/CAPopdata.csv),[chemicaldata_manualua.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Data/chemicaldata_maunalua.csv), [stars.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Data/stars.csv), [wine.csv](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Data/wine.csv), [wine.jpg](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Data/wine.jpg), and [wine.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Data/wine.png)
+   * **_Scripts_**: [Week_7_Goodplot_Badplot_Homework.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Scripts/Week_7_Goodplot_Badplot_Homework.Rmd),[Week_7_Introduction_To_Mapping.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Scripts/Week_7_Introduction_To_Mapping.Rmd), [Week_7_Meteorites_Homework.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Scripts/Week_7_Meteorites_Homework.Rmd), and [Week_7_ggmap.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Scripts/Week_7_ggmap.R)
+   * **_Output_**:[CApop.pdf](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Output/CApop.pdf), [bad_plot.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Output/bad_plot.png), [goodplot.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Output/goodplot.png), [meteoritehw.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_7/Output/meteoritehw.png)
  
- * **Week_8**:
-   * **_Data_**:
-   * **_Scripts_**:
-   * **_Output_**:
+ * [**Week_8**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_8): This week we learned some advanced plotting (patchwork, ggrepel, gganimate, and magick) and learned how to write a function. 
+   * **_Data_**: N/A
+   * **_Scripts_**: [Week8_Advanced_plotting_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Scripts/Week8_Advanced_plotting_class.R), [Week8_Function_Homework.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Scripts/Week8_Function_Homework.Rmd), [Week8_Functional_Programming_class.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Scripts/Week8_Functional_Programming_class.Rmd)
+   * **_Output_**: [functionplothw.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Output/functionplothw.png), [mypenguingif.gif](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Output/mypenguingif.gif), and [penguinplot.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Output/penguinplot.png)
  
  * **Week_9**:
    * **_Data_**:
