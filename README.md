@@ -3,8 +3,12 @@
 ### BIOL 551/L Computer Modeling in Biology
 
 **Author**: Sally Heo  
+
 **Description**: This repository will be used during the Spring 2022 semester for **BIOL 551/L** to upload weekly assignments and projects. This repository is organized by week with subfolders that contain each week's **_Data_**, **_Scripts_**, and **_Outputs_**.  
+
 **BIOL 551/L Repository**: [Spring 2022](https://github.com/Biol551-CSUN/Spring-2022) 
+
+**Group 2 Repository**: [Group_2](https://github.com/Biol551-CSUN/Group_2)
 
 ## **Folders**:
 
@@ -43,10 +47,10 @@
    * **_Scripts_**: [Week8_Advanced_plotting_class.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Scripts/Week8_Advanced_plotting_class.R), [Week8_Function_Homework.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Scripts/Week8_Function_Homework.Rmd), [Week8_Functional_Programming_class.Rmd](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Scripts/Week8_Functional_Programming_class.Rmd)
    * **_Output_**: [functionplothw.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Output/functionplothw.png), [mypenguingif.gif](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Output/mypenguingif.gif), and [penguinplot.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_8/Output/penguinplot.png)
  
- * **Week_9**:
-   * **_Data_**:
-   * **_Scripts_**:
-   * **_Output_**:
+ * **Week_9**: We chose an R package to present for our group project from https://cran.r-project.org/]. CRAN lists all the available packages
+   * **_Data_**: N/A
+   * **_Scripts_**: N/A
+   * **_Output_**: N/A
  
  * **Week_10**:
    * **_Data_**:
