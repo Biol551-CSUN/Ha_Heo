@@ -2,14 +2,17 @@
 #### Created by: Sally Heo ####
 #### Updated on: 2022-04-05 ####
 
-### Load libraries needed to code ####
-library(tidyverse) #Load tidyverse
-library(here) #Load here
-
 #### Install packages ####
 install.packages('reprex') #reproducible example
 install.packages('datapasta')#copy and paste
 install.packages('styler') #copy and paste in style
+
+### Load libraries needed to code ####
+library(tidyverse) #Load tidyverse
+library(here) #Load here
+library(reprex)#Load reprex
+library(datapasta) #Load datapasta
+library(styler) #Load styler
 
 ### Making my first reprex ###
 ## Example of a Reprex - This has an error ##
