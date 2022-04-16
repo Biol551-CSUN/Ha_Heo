@@ -52,8 +52,32 @@
    * **_Scripts_**: N/A
    * **_Output_**: N/A
  
- * **Week_10**:
+ * [**Week_10**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_10): This week we learned how to ask for help if we run into errors in RStudio by googling, using stack overlow, and Reprex. 
+   * **_Data_**: [stars](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_10/Data/stars.csv)
+   * **_Scripts_**: [Getting Help in R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_10/Scripts/Week10_Getting_Help_In_R.R) and [Week 10 Lab Homework](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_10/Scripts/Week10_Lab_Homework.R)
+   * **_shinyApp_**: [app.R](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_10/shinyApp/app.R)
+ 
+ * **Week_11**: This week we worked on our group project to introduce different R packages not discussed in class. 
+   * **_Data_**: N/A
+   * **_Scripts_**: N/A
+   * **_Output_**: N/A
+ 
+ * **Week_12**:
    * **_Data_**:
    * **_Scripts_**:
-   * **_Output_**:
+   * **_Output_**
+  
+* **Week_13**:
+  * **_Data_**:
+  * **_Scripts_**:
+  * **_Output_**:
 
+* **Week_14**:
+  * **_Data_**:
+  * **_Scripts_**:
+  * **_Output_**:
+
+* **Week_15**:
+  * **_Data_**:
+  * **_Scripts_**:
+  * **_Output_**: 
