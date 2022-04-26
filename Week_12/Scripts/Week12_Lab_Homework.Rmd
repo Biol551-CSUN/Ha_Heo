@@ -1,0 +1,56 @@
+---
+title: "Week_12_Lab_Homework"
+author: "Sally Heo"
+date: "4/26/2022"
+output:
+  prettydoc::html_pretty:
+    theme: tactile
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Libraries needed to code ##
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse) #Load tidyverse
+library(here) #Load here
+library(ggthemes) #Load ggthemes
+library(janitor) #Load janitor
+```
+## Load Data ##
+```{r}
+intertidaldata <- read_csv(here("Week_12", "Data", "intertidaldata.csv"))
+View(intertidaldata)
+```
+## Data Wrangling ##
+```{r}
+tidaldata <- intertidaldata %>% # Create object tidaldata
+  clean_names()# Cleaning column names using Janitor package
+tidaldata
+
+tidaldata %>% #Using tidaldata and bringing to use as dataframe
+  mutate(small_barnacles = factor(small_barnacles))#Make small barnacles a factor
+
+small <- tidaldata %>% 
+  group_by(site) %>% 
+  summarise(total_small_barnacles = sum(small_barnacles)) #get sum of small barnacles
+small #View tibble
+```
+## GGplot ##
+```{r, fig.height=10, fig.width=14, message=FALSE, warning=FALSE}
+small %>% #Brining object to use to plot
+  ggplot(aes(fct_reorder(site, total_small_barnacles, .desc = TRUE),
+             y = total_small_barnacles))+ #x-axis in descending order, y-axis is total small barnacles count
+  geom_col(fill = "cornflowerblue")+ #Geometry column and making the fill cornflowerblue
+  labs(x = "Sites",#Giving x-axis label Sites
+       y = "Total Small Barnacles Count", #Giving y-axis label
+       title = "Total Small Barnacles Count by Site")+ #Giving title of plot
+  theme(axis.title = element_text(size = 18, #Editing font of axis titles
+                                  color = "black"))#Giving color black
+ggsave(here("Week_12", "Output", "intertidal.png"),#Save here
+       width = 14, height = 10)
+```
+
+
+
