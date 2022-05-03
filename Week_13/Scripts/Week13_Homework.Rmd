@@ -1,0 +1,79 @@
+---
+title: "Week13: Homework"
+author: "Sally Heo"
+date: "5/2/2022"
+output:
+  html_document:
+    theme: readable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Libraries needed to code ##
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse) #Load tidyverse
+library(here) #Load here
+```
+
+## For Loop ##
+```{r}
+h_work <- here("Week_13", "Data", "homework") #Location on the computer of the folder
+h_files <- dir(path = h_work,pattern = ".csv") #List all the files with .csv
+```
+
+## Pre-allocate space for loop ##
+```{r}
+h_data <- data.frame(matrix(nrow = length(h_files), ncol = 5))#Make an empty dataframe that has one row for each file and 5 columns
+colnames(h_data) <- c("filename", "mean_temp", "stdev_temp", "mean_light", "stdev_light") #Giving the dataframe column names
+h_data
+```
+```{r}
+for (i in 1:length(h_files)){ #Loop over files
+  homework_data <- read_csv(paste0(h_work,"/",h_files[i])) #Reading in our data files
+#glimpse(homework_data)
+h_data$filename[i] <- h_files[i] #Add in the filename for each row
+h_data$mean_temp[i] <- mean(homework_data$Temp.C, na.rm = TRUE)#Adding the temperature mean for all 4 files
+h_data$stdev_temp[i] <- sd(homework_data$Temp.C, na.rm = TRUE)#Adding standard deviation for all 4 files
+h_data$mean_light[i] <- mean(homework_data$Intensity.lux, na.rm = TRUE)#Adding the light intensity mean for all 4 files
+h_data$stdev_light[i] <- sd(homework_data$Intensity.lux, na.rm = TRUE)#Adding the standard deviation for all 4 files
+}
+head(h_data)#View the new dataframe with the mean and standard deviation 
+```
+## map () function using purr ##
+```{r}
+hw_files <- dir(path = h_work,pattern = ".csv", full.names = TRUE)#Save the entire path name
+hw_files #Getting the full file names in less steps
+```
+## map () function using purr: Read in the files ##
+```{r}
+datamap <- hw_files %>% #creating object datamap
+  set_names()%>% #Set's the id of each list to the file name
+  map_df(read_csv,.id = "filename") %>% #Map everything to a dataframe and put the id in a column called filename
+  group_by(filename) %>% #Grouping by file name
+  summarise(mean_temp = mean(Temp.C, na.rm = TRUE),#Getting mean temperature for all 4 files
+            stdev_temp = sd(Temp.C, na.rm = TRUE),#Getting standard deviation for temperature for all 4 files
+            mean_light = mean(Intensity.lux, na.rm = TRUE),#Getting light intensity mean for all 4 files
+            stdev_light = sd(Intensity.lux, na.rm = TRUE)) #Getting standard deviation for light intensity for all four files
+datamap #View the new dataframe
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

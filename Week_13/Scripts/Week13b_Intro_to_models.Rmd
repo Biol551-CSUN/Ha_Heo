@@ -1,0 +1,104 @@
+---
+title: "Untitled"
+author: "Sally Heo"
+date: "4/28/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE, warning=FALSE, message=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load libraries needed to code ##
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse) #Load tidyverse
+library(here) #Load here
+library(palmerpenguins)#Load palmerpenguins
+library(broom) #Load broom
+library(performance) #Load performance
+library(modelsummary) #Load modelsummary
+library(tidymodels) #Load tidymodels
+```
+
+## Model the penguin dataset ##
+* We have tidied and visualized the data and have our set of hypotheses that we want to test
+* We can start modeling
+```{r}
+# Linear model of Bill depth ~ Bill length by species
+Peng_mod<-lm(bill_length_mm ~ bill_depth_mm*species, data = penguins)
+# check model assumptions with performance
+check_model(Peng_mod) #check assumptions of an lm model
+anova(Peng_mod) #View results: base R
+summary(Peng_mod)#View coefficients (effect size) with error
+```
+## View results with broom ##
+* Using broom we can "tidy" results so that it is easier to view and extract
+* Functions glance (), tidy(), augment () will clean up your results
+```{r}
+# Tidy coefficients
+coeffs <- tidy(Peng_mod) #just put tidy() around it
+coeffs
+#tidy r2, etc
+results <- glance(Peng_mod)#glance extracts R-squared, AIc's etc of the model
+results
+#tidy residuals, etc
+resid_fitted <- augment(Peng_mod)
+resid_fitted
+```
+## Results in {modelsummary} ##
+* Export summary tables to word, markdown, or tex document. You can also modify the tables to make them pub quality. 
+```{r}
+# New model
+Peng_mod_noX <- lm(bill_length_mm ~ bill_depth_mm, data = penguins)
+#Make a list of models and name them
+models<-list("Model with interaction" = Peng_mod,
+             "Model with no interaction" = Peng_mod_noX)
+#Save the results as a .docx
+modelsummary(models, output = here("Week_13","output","table.docx"))
+```
+## Modelplot ##
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+library(wesanderson)
+modelplot(models) +
+    labs(x = 'Coefficients', 
+         y = 'Term names') +
+    scale_color_manual(values = wes_palette('Darjeeling1'))
+```
+## Many models with purr, dplyr, and broom ##
+```{r}
+models<- penguins %>%
+  ungroup()%>% # the penguin data are grouped so we need to ungroup them
+    nest(-species) %>% # nest all the data by species
+  mutate(fit = map(data, ~lm(bill_length_mm~body_mass_g, data = .)))
+models
+models$fit #shows you each of the 3 models
+```
+```{r}
+results <- models %>% 
+  mutate(coeffs = map(fit, tidy),#look at the coefficients
+         modelresults = map(fit, glance)) %>% #R2 and others
+  select(species, coeffs, modelresults) %>% # only keep the results
+  unnest() #put it back in a dataframe and specify which columns to unnest
+view(results)#view the results
+```
+## Tidymodels ##
+```{r}
+linear_reg()#linear regression
+```
+```{r}
+#Pipe to a plot 
+lm_mod <- linear_reg() %>% 
+  set_engine("lm") %>% #set the engine for what type of linear regression we are modeling, OLS regression
+  fit(bill_length_mm ~ bill_depth_mm*species, data = penguins) %>% #Add model fit
+  tidy() %>% #Add the tidy it, now we can pipe this into plots, etc. Nice, tidy way to model
+  ggplot()+
+  geom_point(aes(x = term, y = estimate))+
+  geom_errorbar(aes(x = term, ymin = estimate-std.error,
+                    ymax = estimate+std.error), width = 0.1)+
+  coord_flip()
+lm_mod
+```
+
+
+
+
