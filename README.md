@@ -62,22 +62,13 @@
    * **_Scripts_**: N/A
    * **_Output_**: N/A
  
- * **Week_12**:
-   * **_Data_**:
-   * **_Scripts_**:
-   * **_Output_**
+ * [**Week_12**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_12): Working with strings and factors
+   * **_Data_**: [data_dictionary](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_12/Data/intertidal_data_dictionary.csv), [intertidaldata](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_12/Data/intertidaldata.csv), and [latitude](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_12/Data/intertidaldata_latitude.csv)
+   * **_Scripts_**: [Homework](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_12/Scripts/Week12_Lab_Homework.Rmd), [Words](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_12/Scripts/Week12a_Working_with_words.Rmd), [factors](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_12/Scripts/Week12b_Working_with_factors.Rmd)
+   * **_Output_**: [intertidal.png](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_12/Output/intertidal.png)
   
-* **Week_13**:
-  * **_Data_**:
-  * **_Scripts_**:
-  * **_Output_**:
-
-* **Week_14**:
-  * **_Data_**:
-  * **_Scripts_**:
-  * **_Output_**:
-
-* **Week_15**:
-  * **_Data_**:
-  * **_Scripts_**:
-  * **_Output_**: 
+* [**Week_13**](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_13): Iterative coding and Introduction to models
+  * **_Data_**: [cond_data](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_13/Data/cond_data) and [homework](https://github.com/Biol551-CSUN/Ha_Heo/tree/main/Week_13/Data/homework)
+  * **_Scripts_**: [Homework](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_13/Scripts/Week13_Homework.Rmd), [Iterative](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_13/Scripts/Week13_Iterative_coding_classnotes.Rmd), [Models](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_13/Scripts/Week13b_Intro_to_models.Rmd)
+  * **_Output_**: [table](https://github.com/Biol551-CSUN/Ha_Heo/blob/main/Week_13/Output/table.docx)
+ 
